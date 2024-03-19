@@ -1,48 +1,80 @@
-#table-1, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 5px;
-    text-align: center;   
+body {
+    background-color: rgb(74, 137, 116);
 }
 
-#dynamic-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em;
+#title {
+    margin-top: 8px;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bolder;
 }
 
-.title-1 {
-    color: lightblue
+#facts-container, #abt-me-container {
+    padding-top: 12px;
+    background-color: rgb(107, 212, 177);
+    border-radius: 10px;
+    padding-bottom: 12px;
+    /* padding: 12px; */
+    margin: 0;
+    margin-bottom: 12px
 }
 
-.title-2 {
-    color: blue
+.col-5 {
+    background-color: rgb(102, 191, 161);
+    border-radius: 10px;
+    padding-top: 12px;
+    padding-bottom: 8px;
 }
 
-.title-3 {
-    color: darkblue
+#facts {
+    margin: 0;
 }
 
-th {
-    background-color: lime;
+#abt-me-data {
+    background-color: rgb(102, 191, 161);
+    border-radius: 10px;
+    /* margin: 0; */
+    /* padding: 0; */
+    margin-left: 12px; margin-right: 12px;
+    padding-top: 12px; padding-bottom: 12px;
 }
 
-td {
-    background-color: lightgreen;
+#dynamic-text-button, #skills-button {
+    --bs-btn-color: #212529;
+    --bs-btn-bg: rgb(102, 191, 161);
+    --bs-btn-border-color: rgb(102, 191, 161);
+    --bs-btn-background-color: rgb(102, 191, 161);
+    --bs-btn-hover-bg: rgb(36, 63, 54);
+    --bs-btn-hover-border-color: rgb(36, 63, 54);
+    --bs-btn-active-bg: rgb(36, 63, 54);
+    --bs-btn-active-border-color: rgb(36, 63, 54);
 }
 
-.col-1 {
-    font-family:Arial, Helvetica, sans-serif;
-    font-weight: bold;
+#dynamic-input-container {
+    width: 400px;
 }
 
-.col-2-1 {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: red;
+#skills-container {
+    margin-bottom: 0;
 }
 
-.col-2-2 {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: blue;
+#skills-table-card {
+    background-color: rgb(107, 212, 177);
+    padding: 0px;
+    padding-top: 16px;
+    margin-bottom: 12px;
+}
+
+#skills-table>:not(caption)>*>* {
+    background-color: rgb(107, 212, 177);
+    border-bottom-width: 0;
+}
+
+#dynamic-text-output {
+    margin-bottom: 25%;
+}
+
+@media (max-width: 400px) {
+    #dynamic-input-container {
+        width: 100%;
+    }
 }

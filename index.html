@@ -1,52 +1,94 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Personal Page</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1 class="title-1">Tomas's Personal Page</h1>
-        <p id="name" class="title-1">Name: Tomas Rodriguez</p>
-        <p class="title-2">Major: Computer Science</p>
-        <p class="title-2">Year of Enrollment: 2020</p>
-        <label class="title-3" for="github">GitHub: </label>
-        <a id="github" href="https://github.com/trodriguezam" target="_blank">trodriguezam</a>
-        <p class="title-3">About Me: bla bla</p>
-        <p>Skills</p>
-        <table id="table-1">
-            <tr>
-                <th>Skill</th>
-                <th>Level</th>
-            </tr>
-            <tr>
-                <td class="col-1">Python</td>
-                <td class="col-2-1">Advance</td>
-            </tr>
-            <tr>
-                <td class="col-1">JavaScript</td>
-                <td class="col-2-1">Basic</td>
-            </tr>
-            <tr>
-                <td class="col-1">HTML/CSS</td>
-                <td class="col-2-2">Basic</td>
-            </tr>
-            <tr>
-                <td class="col-1">English</td>
-                <td class="col-2-2">Advance</td>
-            </tr>
-            <tr>
-                <td class="col-1">Spanish</td>
-                <td class="col-2-2">Native</td>
-            </tr>
-        </table>
-        <p>Enter Text:</p>
-        <button id="button">
-            <label for="button-input">Change</label>
-        </button>
-        <input id="button-input" type="text">
-        <div id="dynamic-text">
-            <p id="text-box"></p>
+        <div class="container text-center">
+            <div id="header" class="col align-self-center">
+                <h1 id="title">Tomas's Personal Page</h1>
+            </div>
+            <div id="facts-container" class="row align-items-center">
+                <div id="facts" class="row justify-content-between" >
+                    <div class="col-5">
+                        <label for="name"><h6>Name:</h6></label>
+                        <span id="name">Tomas Rodriguez<br></span>                        </span>
+                        <label for="github"><h6>GitHub:</h6></label>
+                        <a id="github" href="https://github.com/trodriguezam" target="_blank">trodriguezam</a>
+                    </div>
+                    <div class="col-5">
+                        <label for="major"><h6>Major:</h6></label>
+                        <span id="major">Computer Science<br></span>
+                        <label for="year"><h6>Year of Enrollment:</h6></label>
+                        <span id="year">2020</span>
+                    </div>
+                </div>
+            </div>
+            <div id="abt-me-container" class="row align-items-center">
+                <div id="abt-me-data" class="col">
+                    <h5>About Me</h5>
+                    Im an undergraduate at Universidad de los Andes, currently
+                    studying Civil Engineering in Computer Science, with a minor
+                    in Electric Engineering.
+                </div>
+            </div>
         </div>
+        <div id="skills-container" class="container">
+            <p class="d-inline-flex gap-1">
+                <button id="skills-button" class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Skills
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div id="skills-table-card" class="card card-body">
+                    <table id="skills-table" class="table table-striped">
+                        <tr>
+                            <th>Skill</th>
+                            <th>Level</th>
+                        </tr>
+                        <tr>
+                            <td>Python</td>
+                            <td>Advance</td>
+                        </tr>
+                        <tr>
+                            <td>C/C++</td>
+                            <td>Advance</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td>Basic</td>
+                        </tr>
+                        <tr>
+                            <td>HTML/CSS</td>
+                            <td>Basic</td>
+                        </tr>
+                        <tr>
+                            <td>English</td>
+                            <td>Advance</td>
+                        </tr>
+                        <tr>
+                            <td>Spanish</td>
+                            <td>Native</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div id="dynamic-text-container" class="container">
+            <h5>Enter Text:</h5>
+            <div id="dynamic-input-container" class="input-group mb-3">
+                <input  id="dynamic-input" type="text" class="form-control" placeholder="Text" aria-label="dynamic-text" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="dynamic-text-button">Change</button>
+            </div>
+        </div>
+        <div id="dynamic-output-container" class="container text-center">
+            <h4 id="dynamic-text-output"></h4>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script src="main.js"></script>
     </body>
 </html>
